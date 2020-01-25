@@ -1,0 +1,105 @@
+<div class="row h-100 justify-content-center"> <!--div for about columns-->
+                    <div class="col-2">
+                      <p class="text-center text-uppercase font-weight-bold text-color">Background</p>
+        
+                    </div>
+                    <div class="col-5">
+                        <p class="text-left">Born in Lagos, Nigeria. I'm currently a fourth-year computer science student at the University of Prince Edward Island. 
+                            I enjoy creating efficient and scalable software to solve real-world problems. I aim for modern and clean designs in both art and code.</p>
+
+                            <p class="text-left"><p class="text-left">My other interests include playing the piano, and creating both graphic and video content.</p></p>
+                        </div>
+                
+                </div><!--about columns end-->
+
+//for skills here
+
+
+
+                     <div id="skills"><!--skills start-->
+                    <div class="row justify-content-center">
+                        <div class="col-4">
+                          <p class="text-right text-uppercase font-weight-bold text-color">Skills</p>
+            
+                        </div>
+                        <div class="col-8">
+                            <table class="table table-sm table-borderless">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">LANGUAGES</th>
+                                    <th scope="col">FRAMEWORKS</th>
+                                    <th scope="col">TOOLS</th>
+                                    <th scope="col">OTHER</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Java</td>
+                                    <td>Wordpress</td>
+                                    <td>Android Studio</td>
+                                    <td>Piano</td>
+                                  </tr>
+                                  <tr>
+                                    <td>JavaScript</td>
+                                    <td>Bootstrap</td>
+                                    <td>Photoshop</td>
+                                    <td>Drums</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Python</td>
+                                    <td></td>
+                                    <td>Premiere Pro</td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>
+                                    <td>PHP</td>
+                                    <td></td>
+                                    <td>Wix</td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>
+                                    <td>HTML</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>
+                                    <td>CSS3</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                    </div>
+    
+                </div> <!--skills end-->
+
+
+
+
+                const faders = document.querySelectorAll(".fade-in");
+const appearOptions = {
+    threshold: 0,
+    rootMargin: "0px 0px -250px 0px"
+  };
+  
+  const appearOnScroll = new IntersectionObserver(function(
+    entries,
+    appearOnScroll
+  ) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) {
+        return;
+      } else {
+        entry.target.classList.add("appear");
+        appearOnScroll.unobserve(entry.target);
+      }
+    });
+  },
+  appearOptions);
+  
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });

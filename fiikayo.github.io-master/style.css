@@ -1,0 +1,189 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    background: white;
+    color:#3d4044;
+    line-height: 1.6;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.col-width p{
+    
+    width: 70%;
+}
+
+/*section{
+    padding-top: 5rem;
+    
+    height: 100vh;
+}*/
+.fade-in {
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+  }
+  
+  .fade-in.appear {
+    opacity: 1;
+  }
+  
+
+
+
+footer{
+    padding-top: 10rem;
+    padding-left:1rem;
+    width: 100%;
+}
+
+#home{
+    margin-top: 10rem;
+    margin-left: 5rem;
+    margin-bottom: 5rem;
+}
+
+#about{
+    padding-top: 15rem;
+}
+
+#skills{
+    padding-top:5rem;
+}
+
+#experience{
+    padding-top: 10rem;
+}
+
+#projects{
+    padding-top: 10rem;
+}
+
+#home h2{
+    font-size: 2.5rem;
+    padding-top:3rem;
+    width: 60%;
+}
+
+#home h3{
+    padding-top: 10rem;
+}
+
+#projects a{
+    text-decoration: none;
+    color: #3d4044;
+}
+#projects a:hover{
+    color: #3d4044; 
+    text-decoration: none;
+}
+
+
+.job-title{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.text-color{
+    color: maroon;
+}
+
+.job{
+    padding-bottom: 4rem;
+    width: 70%;
+}
+
+.projects{
+    padding-bottom: 4rem;
+    width: 70%;
+}
+
+
+.job-description{
+    width:80%;
+}
+
+.job-skills p{
+    margin-right: 1rem;
+    border-radius: 20px; /* Making border radius */
+    border: 2px solid lightskyblue;
+    width: auto; 
+    height: auto; 
+    padding: 5px 30px 5px 30px;
+    font-size: small; 
+}
+.contact a{
+    color: maroon;
+}
+.contact a{
+    padding-right: 1rem;
+}
+
+
+
+@media only screen and (max-width: 768px){
+    #home{
+        margin-top: 2rem;
+        margin-left: 2rem;    
+    }  
+    
+    #home h1{
+        font-size: 1.5rem;
+    }
+    
+    #home h3{
+        font-size: 1rem;
+    }
+
+    #home h2{
+        font-size: 1.5rem;
+        padding-top: 6rem;
+        width:90%;
+    }
+
+    #about{
+        margin-top: -10rem;
+        margin-left:2rem;
+    }
+
+    #about p{
+        margin-top: 5rem;
+    }
+    .info p{
+        width: 100%;
+        padding-top: 2rem;
+        margin-left: -4rem;
+        font-size: small;
+    }
+
+    .table{
+        width: 20%;
+    }
+    .job{
+        padding-top:2rem;
+        width:70%;
+    }
+    .job p{
+        font-size: small;
+        margin-left: -4rem;
+    }
+
+    .projects{
+        padding-top: 2rem;
+        width: 70%;
+    }
+
+    .projects p{
+        font-size: small;
+        margin-left: -4rem;
+    }
+    
+    #foot a{
+        color: blue;
+        width:100%;
+      
+    }
+}
+.table{
+    width: 80%;
+}
+

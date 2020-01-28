@@ -88,14 +88,38 @@ section{
 }
 
 
-@media (min-width: 576px) { 
+ @media only screen and (max-width: 768px){
+    #home h1{
+        font-size: 1.5rem;
+    }
+    #home h2{
+        font-size: 2rem;
+        width: 100%;
+    }
+    #home h3{
+        font-size:1rem
+    }
+    ul li {
+        display: block !important;
+      }
+
+    
 
 }
 
-@media (min-width: 768px) { 
-    section{
-        
-        font-size: small;
+@media (max-width: 767px) {
+    #home h1{
+        font-size: 1.5rem;
+    }
+    #home h2{
+        font-size: 2rem;
+        width: 100%;
+    }
+    #home h3{
+        font-size:1rem
     }
 
- }
+    ul li {
+      display: block !important;
+    }
+  }

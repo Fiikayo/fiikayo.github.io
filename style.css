@@ -64,10 +64,10 @@ section{
 
 #projects a{
     text-decoration: none;
-    color: #3d4044;
+    color: maroon; ; 
 }
 #projects a:hover{
-    color: #3d4044; 
+    color: maroon; ; 
     text-decoration: none;
 }
 

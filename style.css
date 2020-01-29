@@ -99,10 +99,8 @@ section{
     #home h3{
         font-size:1rem
     }
-    ul li {
-        display: block !important;
-      }
-
+    .my-list { display: flex;
+        flex-wrap: wrap;}
     
 
 }
@@ -118,8 +116,6 @@ section{
     #home h3{
         font-size:1rem
     }
-
-    ul li {
-      display: block !important;
-    }
+    /*.my-list { display: flex;
+        flex-wrap: wrap;}*/
   }

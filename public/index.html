@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="output.css" rel="stylesheet">
+</head>
+<body>
+    <div class="font-sans md:w-screen" style="background-color: #FEFFFE; width:800px; margin:0 auto;" x-data="projectInfo">
+            <div id="welcome-section" class="w-full m-10">
+                <h1 class="text-4xl"><span x-text="greeting"></span>! I'm Fikayo Oyinloye, a software developer</h1>
+                <p>Here are a few things I've worked on mainly at Lake Solutions Inc where I currently work as a JR Developer</p>
+            </div>
+            <div class="w-full">
+                <template x-for="project in projects" :key="project.id">
+                    <div class="m-10">                   
+                        <a x-bind:href="project.link" class="" ><h3 x-text="project.name" class="text-red-900 text-lg"></h3></a> 
+                        <p x-text="project.description" class=" text-gray-900"></p>
+                        <div class="flex justify-between">
+                            <div >
+                                <p class="text-sm">Tools used: <span x-text="project.tools" class="text-sky-700"></span></p>
+                            </div>
+                           <a x-bind:href="project.link" class="text-sm text-red-900">View</a> 
+                        </div>
+                        
+                    </div>
+                </template>
+            </div> 
+            
+            <div class="m-10">
+                Get in touch <a href="mailto:danieloyinloye@gmail.com">danieloyinloye@gmail.com</a> 
+            </div>
+    </div>
+</body>
+
+<script>
+    function projectInfo(){
+        return{
+            projects:[
+                {
+                    id:1,
+                    name:'Fall Flavours Trip Planner',
+                    link:'https://fallflavours.ca/trip-planner/',
+                    description:`This trip planner allowed users to search for events, and using google maps plan their route of desired events.
+                                I worked alongside a senior developer on this project at Lake Solutions Inc.`,
+                    tools:'wordpress, jQuery'
+                },
+                {
+                    id:2,
+                    name:'GetBaking',
+                    link:'https://getbaking.ca/',
+                    description:`It is worth noting that I worked alongside a senior developer on this project.
+                                I worked on rebuilding the build-a-box section front-end using alpineJS. 
+                                Implemented the delivery feature, and session cart features, and making a few fields dynamic.`,
+                    tools:'wordpress, jQuery, alpineJS'
+                },
+                {
+                    id:3,
+                    name:'GetBooking',
+                    link:'https://getbooking.io/',
+                    description:'I work as a junior developer on this project creating new features and maintaining bugs.',
+                    tools:'laravel'
+                },
+                {
+                    id:4,
+                    name:'Island Tides',
+                    link:'https://islandtidesfestival.com/schedule/',
+                    description:`I worked on the backend of the schedule, and user portal aspects of this site. I worked alongside a senior developer on this project at Lake Solutions Inc.`,
+                    tools:'wordpress, jQuery'
+                },
+        ],
+        helloText:['Hello','Salut','Hallo',"Kon'nichiwa","Bawo"],
+        greeting:'Hello',
+        randomGreeting(){
+            let index = Math.floor(Math.random() * this.helloText.length);
+            this.greeting=this.helloText[index];
+        },
+        init(){
+            setInterval(() => {
+                this.randomGreeting();
+              }, 3000);
+        }
+
+        
+        }
+    }
+
+</script>
+</html>

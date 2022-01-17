@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oluwafikayo Daniel Oyinloye</title>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <link href="/public/output.css" rel="stylesheet">
+    <link href="output.css" rel="stylesheet">
 </head>
 
 <style>
@@ -17,16 +17,24 @@
     @media only screen and (max-width: 600px)
     {
         .cont{
-            width: 100% !important; 
-         max-width:100%;
+            width: 100%; 
+            max-width:100%;
+        }
+
+        .descrip{
+            margin-top: 10px;
+        }
+
+        .hello{
+            font-size: 1.5rem;
         }
     }
 </style>
 <body>
     <div class="font-sans cont" x-data="projectInfo">
             <div id="welcome-section" class="w-full m-10">
-                <h1 class="text-4xl"><span x-text="greeting"></span>! I'm Oluwafikayo Oyinloye, a software developer</h1>
-                <p>Here are a few things I've worked on mainly at Lake Solutions Inc where I currently work as a JR Developer</p>
+                <h1 class="text-3xl hello"><span x-text="greeting"></span>! I'm Oluwafikayo Oyinloye, a software developer</h1>
+                <p class="descrip">Here are a few things I've worked on mainly at Lake Solutions Inc where I currently work as a JR Developer</p>
             </div>
             <div class="w-full">
                 <template x-for="project in projects" :key="project.id">
